@@ -8,7 +8,7 @@ const TaskList = ()=>{
     const addTaskBhai=()=>{
         if(newTask.trim()==="")
             return;
-        setNewTask([...tasks,newTask])
+        setTasks([...tasks,newTask])
         setNewTask("")
     };
     return(
@@ -19,7 +19,7 @@ const TaskList = ()=>{
         placeholder="Enter your task"
         value={newTask}
         onChange={(e)=>setNewTask(e.target.value)}></input>
-        <button on Click={addTaskBhai}>Add your task</button>
+        <button onClick={addTaskBhai}>Add your task</button>
         <ul>
             {tasks.map((task,index)=>(
                 <li key={index}>{task}</li>
